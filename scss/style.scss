@@ -422,12 +422,12 @@ input::placeholder {
 
 .about {
 	 margin: 0;
-    
-    position: absolute;
+     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+   
 
 	&__row {
 		@include flexbox();
@@ -442,7 +442,7 @@ input::placeholder {
 		}
 	}
 	&__right {
-    color:#fff;
+    color:#090;
     flex: 0 0 70%;
     padding-left:120px;
 	}
