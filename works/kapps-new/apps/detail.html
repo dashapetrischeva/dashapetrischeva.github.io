@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Kapps - Kommune Apps</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		
+	</head>
+	<body>
+
+	<div class="wrapper">
+	
+
+  
+ 
+
+	
+		<div class="content"> 
+		
+ <header class="header">		
+			
+<div class="header__content">
+	
+	
+				
+					
+				   <div class="menu__body">
+				   	
+					
+					<a href="../index.html" class="header__logo">
+					<img src="../img/logo.png" alt="">
+				   </a>
+                <ul class="menu__list">
+					   <li><a href="index.html" class="menu__link header__link1">Apps</a></li>
+						<li><a href="index.html" class="menu__link header__link2">Integrasjoner</a></li>
+						<li><a href="aindex.html" class="menu__link header__link3">RPA</a></li>
+						<li><a href="index.html" class="menu__link header__link4">Dokumenter</a></li>
+						<li><a href="index.html" class="menu__link header__link5">Script</a></li>
+						<li><a href="../dele.html" class="menu__link header__link6">DELE</a></li>
+					</ul>
+					<form class="form__search">
+	<button type="submit" class="search__submit"></button>
+  <input type="text" placeholder="Søk...">
+  
+</form>
+<div class="page__action">
+	<button type="button" class="page__theme"></button>
+
+</div>
+				</div>
+				
+
+				<div class="header-menu__icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="header-menu">
+					
+				</div>
+				</div>	
+	</header>
+			
+		<section class="detail__title">
+		<h1>FIPO Helpdesk</h1>
+<div class="detail__title-text">Web-basert helpdesk</div>
+	</section>
+
+			<section class='detail__body'>
+			
+<div class="detail__right">
+	<div class="detail__block">
+	<div class="slider">
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/1.jpg">
+			<img src="../img/apps/1/1.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/2.jpg">
+			<img src="../img/apps/1/2.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/3.jpg">
+			<img src="../img/apps/1/3.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/4.jpg">
+			<img src="../img/apps/1/4.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/5.jpg">
+			<img src="../img/apps/1/5.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/6.jpg">
+			<img src="../img/apps/1/6.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/7.jpg">
+			<img src="../img/apps/1/7.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/8.jpg">
+			<img src="../img/apps/1/8.jpg" alt="">
+			</a>
+		</div>
+		<div class="slider__item">
+			<a data-fancybox="gallery" href="../img/apps/1/9.png">
+			<img src="../img/apps/1/9.png" alt="">
+			</a>
+		</div>
+	</div>
+</div>
+	<div class="beskriv detail__block">
+	<h2>Beskrivelse</h2>
+<h3>Noen funksjoner</h3>
+<ul>
+<li>O365 innlogging</li>
+<li>Mobiltilpasset</li>
+<li>Meld inn saker via brukerportal eller e-post</li>
+<li>Sett opp flere helpdesker i samme installasjon, med egne saksnummer (f.eks. forskjellige avdelinger)</li>
+<li>Innebygd nettbutikk, som også lar deg knytte varer og forbruk til en sak</li>
+<li>Faktura-rapport</li>
+<li>Kategorisering som tjeneste, cmdb, kategori, lokasjon…</li>
+<li>Automatisk tildeling av saker basert på lokasjon eller kategori.</li>
+<li>Redigerbare e-postmaler</li>
+<li>API for automatisering</li>
+<li>Mulighet for automatisk lukking av saker basert på tid</li>
+</ul>
+</div>
+<div class="install detail__block">
+<h2>Installasjonsveiledning</h2>
+<p>Pr. dags dato ligger kode i et privat BitbBucket repository. For hver gang det publiseres endringer i GIT, så lages det automatisk en nytt docker-image, (som forøvrig også er privat). Målet er å få disse over til public, men har valgt privat under selve utviklingen.</p>
+
+<p>Om du ønsker tilgang for å teste, så ta gjerne kontakt med oss.</p>
+
+<p>Vi kjører testmiljø i Docker på en Ubuntu-server og produksjonsmiljø kjøres i Kubernetes på Digital Ocean.</p>
+
+<p>Under er noen av konfigurasjonsfilene, men disse bør tilpasses ditt eget miljø. F.eks. er det ikke sikkert du har behov for å kjøre database og phpmyadmin i containere.</p>
+<div><a href="#" class="lesmer" onclick="return false" >Les mer</a></div>
+<div class="registrert">
+<h3>Innlogging</h3>
+<p>Innlogging har fokus på Office365 og er fremhevet. Men støttes også innlogging med brukernavn/passord.</p>
+
+<p>Så pr. dags dato anbefales helpdesk sammen med Office365.</p>
+
+<p>Her må det da settes opp en Enterprise applikasjon i ditt miljø, med Applikasjonstilgang for User.Read.All. Nøkler legges som variabel i docker-oppsett.</p>
+
+<h3>Docker</h3>
+<pre>
+<code>
+## docker-compose.yaml
+## FIPO Helpdesk
+
+version: '3.2'
+services:
+
+  ## API
+  fipo-frontend:
+    container_name: fipo-frontend
+    image: fosenikt/fipo-frontend:latest
+    restart: always
+    ports:
+      - "8090:80"
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+        - VIRTUAL_HOST=fipo.fikt.no
+        - API_URL=fipoapi.fikt.no
+    networks:
+      - default
+
+  ## API
+  fipo-api:
+    container_name: fipo-api
+    image: fosenikt/fipo-backend:latest
+    restart: always
+    ports:
+      - "8091:80"
+    volumes:
+      - fipo-upload:/var/www/html/upload
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+        - VIRTUAL_HOST=fipoapi.mittdomene.no
+        - FRONTEND_HOST=fipo.mittdomene.no
+        - DB_NAME=fipo
+        - DB_USER=fipo
+        - DB_PASSWORD=Kake123Passord
+        - DB_HOST=fipo-db
+        - MEMCACHED_HOST=fipo-memcached
+        - MEMCACHED_PORT=11211
+        - O365_TENANT_ID=TENANT_ID
+        - O365_APP_ID=APP_ID
+        - O365_APP_SECRET=APP_SECRET
+        - JWT_ISSUER=TOKEN_ISSUER
+        - JWT_SECRET=TOKEN_SECRET
+        - API_SOURCE_DIR=/var/www/html/
+        - UPLOAD_FOLDER=/upload
+        - IPGEOLOCATION_API_KEY=API_KEY
+    networks:
+      - default
+
+
+  fipo-schedule:
+    build:
+      context: ./fipo-schedule/
+      dockerfile: .docker/Dockerfile
+    restart: always
+    container_name: fipo_schedule
+    ports:
+      - "8081:9005"
+    volumes:
+      - type: bind
+        source: /var/www/fip-online-app/fipo-schedule/src
+        target: /var/www/html
+        bind:
+          propagation: shared
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+      - CRON_USER=root
+      - CRON_SCHEDULE=*/1 * * * *
+      - CRON_COMMAND=php /var/www/html/run.php
+      - APACHE_RUN_USER=www-data
+      - APACHE_RUN_GROUP=www-data
+      - API_URL=fipo-api
+      - TOKEN="TOKEN_FRA_API"
+    networks:
+      - default
+
+
+  ## Memcached
+  fipo-memcached:
+    container_name: fipo-memcached
+    image: memcached:latest
+    restart: always
+    ports:
+        - "11212:11211"
+    networks:
+      - default
+
+
+  ## Database
+  fipo-db:
+    container_name: fipo-db
+    build:
+      context: ./fipo-db/
+      dockerfile: .docker/Dockerfile
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'fipo_helpdesk'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'fipo_db_user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'Kake123Passord'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'Kake123Passord'
+      TZ: Europe/Oslo
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+      # Where our data will be persisted
+    volumes:
+      - ./fipo-db:/docker-entrypoint-initdb.d
+      - fipo-db:/var/lib/mysql
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+
+  ## PHPmyadmin
+  fipo-phpmyadmin:
+    container_name: fipo_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    links:
+      - fipo-db
+    environment:
+      VIRTUAL_HOST: fipdb.fikt.no
+      PMA_HOST: fipo-db
+      PMA_PORT: 3306
+    ports:
+      - '8080:80'
+    volumes: 
+      - /sessions
+
+## VOLUMES
+volumes:
+    persistent:
+    fipo-db:
+    fipo-upload:
+
+networks:
+  default:
+    external:
+      name: webproxy
+Kubernetes
+## fipo-helpdesk-k8-backend-deployment.yaml
+## FIPO Helpdesk Backend (API)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fipo-backend-deployment
+  labels:
+    app: fipo-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fipo-backend
+  template:
+    metadata:
+      labels:
+        app: fipo-backend
+    spec:
+      containers:
+       - name: fipo-backend
+         image: fosenikt/fipo-backend:latest
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 80
+         env:
+          - name: DB_NAME
+            value: fipo_helpdesk
+          - name: DB_USER
+            value: fipo_helpdesk
+          - name: DB_PASSWORD
+            value: PASSORD
+          - name: DB_HOST
+            value: DATABASE_SERVER
+          - name: DB_PORT
+            value: '3306'
+          - name: O365_APP_ID
+            value: APP_ID
+          - name: O365_APP_SECRET
+            value: 'APP_SECRET'
+          - name: JWT_ISSUER
+            value: TOKEN_ISSUER
+          - name: JWT_SECRET
+            value: TOKEN_SECRET
+          - name: URL_BACKEND
+            value: //helpdesk-api.mittdomene.no/
+          - name: URL_FRONTEND
+            value: //helpdesk.mittdomene.no/
+      imagePullSecrets:
+       - name: dockerhub-secret
+## fipo-helpdesk-k8-frontend-deployment.yaml
+## FIPO Helpdesk Frontend (API)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fipo-frontend-deployment
+  labels:
+    app: fipo-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fipo-frontend
+  template:
+    metadata:
+      labels:
+        app: fipo-frontend
+    spec:
+      containers:
+       - name: fipo-frontend
+         image: fosenikt/fipo-frontend:latest
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 80
+         env:
+          - name: VIRTUAL_HOST
+            value: helpdesk.mittdomene.no
+          - name: API_URL
+            value: helpdesk-api.mittdomene.no
+      imagePullSecrets:
+       - name: dockerhub-secret
+       </code>
+       </pre>
+       </div>
+</div>
+</div>
+	<div class="detail__left">
+					<div class="detail__left-block">
+					<div class="detail__left-eier-title">Eier</div>
+					<div class="detail__left-eier-value"><a href="#">Fosen IKT</a></div>
+					</div>
+					<div class="detail__left-block">
+					<div class="detail__left-lisens-title">Lisens</div>
+					<div class="detail__left-lisens-value"><a href="#">MIT License</a></div>
+					</div>
+ 					<div class="detail__left-block">
+					<div class="detail__left-tags-title">Tags</div>
+					<div class="detail__left-tags-value">
+						<span>helpdesk</span>
+						<span>kundeservice</span>
+						<span>ticket</span>
+						<span>brukerstøtte</span>
+						<span>sak</span>
+						<span>sakssystem</span>
+					</div>
+					</div>
+
+
+				</div>
+			</section>
+
+
+
+
+
+
+	
+
+
+
+			<section class="links">
+				<div class="links__row">
+					<div class="links__item">
+						<div class="links__item-title">
+							Kontakt oss
+						</div>
+						<div class="links__item-text">
+							E-post: helpdesk@fosenikt.no
+						</div>
+						<div class="links__item-text">
+							Telefon: 48 11 49 99
+						</div>
+						<div class="links__item-text">
+							Adresse: Rådhusveien 13, 7100 Rissa (Trøndelag)
+						</div>
+					</div>
+
+					<div class="links__item">
+						<div class="links__item-title">
+							Quick links
+						</div>
+						<div class="links__item-text">
+							<a href="https://kapps.no/about-us/">Om oss</a>
+						</div>
+						<div class="links__item-text">
+							<a href="https://kapps.no/blog/">Blogg</a>
+						</div>
+						<div class="links__item-text">
+							<a href="https://kapps.no/ressurser-og-apne-data/">Ressurses og åpne data</a>
+						</div>
+					</div>
+
+					<div class="links__item">
+						<div class="links__item-title">
+							Community
+						</div>
+						<div class="links__item-text">
+							<a href="https://app.slack.com/client/TC8Q2QTDX/C01LWJC7RH6">Gå til community</a>
+						</div>
+						
+					</div>
+
+					<div class="links__item">
+						<div class="links__item-title">
+							Follow us
+						</div>
+						<div class="links__item-text">
+							<a href="https://www.google.com">
+								<img class="facebook" src="../img/facebook.png" alt="">
+							</a>
+
+							
+
+						</div>
+						
+					</div>
+
+					
+				</div>
+
+			</section>
+
+		
+
+		<footer class="footer">
+			<div class="footer__content">
+				© 2020 En idé og tjeneste av Fosen IKT.
+				</div>
+		</footer>
+
+		</div>
+
+
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="../js/slick.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+	<script src="../js/detail.js"></script>
+
+</body>
+</html>		
+
+
+
+	
+	
