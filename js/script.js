@@ -1,47 +1,49 @@
-$(document).ready(function(){
+// Строгий режим
+"use strict"
 
-	$('.menu__icon').click(function(event){
-		$('.menu__icon,.menu__body').toggleClass('active');
-		$('body').toggleClass('lock');
+window.addEventListener('load', windowLoad)
+
+
+function windowLoad() {
+
+
+
+	sliderInit();
+}
+
+
+
+
+
+
+function sliderInit() {
+	const sliderReviews = new Swiper('.slider-works', {
+		// Optional parameters
+		loop: true,
+		slidesPerView: 3,
+		spaceBetween: 24,
+		breakpoints: {
+			320: {
+				slidesPerView: 1.1,
+				spaceBetween: 10,
+			},
+			600: {
+				slidesPerView: 1.4,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1050: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			},
+		},
+
+
+
+
+
 	});
-});
-
-
-function ibg(){
-
-$.each($('.ibg'), function(index, val) {
-if($(this).find('img').length>0){
-$(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
 }
-});
-}
-
-ibg();
-
-
-
-if($('.slider__body').length>0){
-	$('.slider__body').slick({
-       dots:true,
-       autoplay:true,
-       autoplaySpeed:4000,
-       arrows:false,
-       accessibility:false,
-       slidesToShow:1,
-       slidesToScroll: 1,
-       adaptiveHeight:true,
-       infinite: true,
-
-
-
-       nextArrow:'<button type="button" class="slick-next"></button>',
-       prevArrow:'<button type="button" class="slick-prev"></button>',
-       responsive:[{
-       	breakpoint: 768,
-       	settings: {}
-       }]
-		});
-}
-
-
-

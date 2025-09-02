@@ -1,82 +1,180 @@
 <!DOCTYPE html>
-<html lang="ru">
-	<head>
-		<title>Dasha Petrischeva</title>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-		<meta name="viewpoint" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		
-	</head>
-	<body>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	<title>Dasha Petrischeva</title>
+</head>
+
+<body>
 	<div class="wrapper">
-	
-
-  <header class="header">		
-			
-<div class="container">
-				<div class="header__row ">		
-				<div class="header__left ">	
-					<a href="index.html" class="header__logo">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">
 					Dasha Petrischeva
-				</a>
 				</div>
-				<nav class="header__menu">
-					<div class="menu__icon">	
-						<span></span>		
-				   </div>
-				   <div class="menu__body">
-					<ul class="menu__list">
-						<li><a href="about.html" class="menu__link header__link1">About</a></li>
-					
-						
-						
-					</ul>
-				</div>
-				</nav>
-				
-				
-				</div>
-			</div>		
-	</header>
-
-		
-		<div class="content">
-
-		<section class="slider">
-			<div class="container">
-				<div class="slider__body">
-					<div class="slider__item">
-						<a href="works/PrimeOne/index.html"><img src="img/portfolio/1.png" alt=""></a>
-					
-					</div>
-					<div class="slider__item">
-						<a href="works/bicycle/index.html"><img src="img/portfolio/5.png" alt=""></a>
-					</div>
-					<div class="slider__item">
-						<a href="works/kapps-new/index.html"><img src="img/portfolio/3.jpg" alt=""></a>
+				<div class="header__menu menu-header">
+					<div class="menu-header__container">
+						<ul class="menu-header__list">
+							<li class="menu-header__item">
+								<a href="#about" class="menu-header__link">About</a>
+							</li>
+							<li class="menu-header__item">
+								<a href="#skills" class="menu-header__link">Skills</a>
+							</li>
+							<li class="menu-header__item">
+								<a href="#works" class="menu-header__link">Works</a>
+							</li>
+							<li class="menu-header__item">
+								<a href="#contact" class="menu-header__link">Contact</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</section>
-		</div>
-		<footer class="footer">
-			<div class="footer__content">
-				<div class="footer__row">
-					<div class="footer__copyright">
-						© 2024 Dasha Petrischeva 
+		</header>
+		<main class="page">
+
+			<section class="page__about about" id="about">
+				<div class="about__container">
+
+					<div class="about__image">
+						<img src="img/jeg.png" alt="">
+					</div>
+					<div class="about__content content-about">
+						<div class="content-about__header">
+							<div class="content-about__info">
+								<div class="content-about__title">
+									Daria Petryshcheva
+								</div>
+								<div class="content-about__profession">
+									Frontent developer
+								</div>
+							</div>
+							<a href="#works" class="content-about__works">My works</a>
+
+						</div>
+
+
+						<div class="content-about__text">
+							Hi! I’m Daria Petryshcheva, a frontend developer passionate about building adaptive, modern,
+							and user-friendly websites. I pay great attention to detail — writing clean, semantic HTML,
+							applying the BEM methodology for scalable code, and crafting thoughtful interfaces. I see
+							complex tasks not as obstacles but as challenges to break down and solve step by step. My
+							goal is to create websites that are both comfortable and enjoyable for users.
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="page__skills skills" id="skills">
+				<div class="skills__container">
+					<div class="skills__items">
+						<div class="skills__item item-skills">
+							<div class="item-skills__content">
+								<h3 class="item-skills__title">Tech Stack</h3>
+								<div class="item-skills__text">
+									<ul>
+										<li>• HTML</li>
+										<li>• CSS/SCSS</li>
+										<li>• JavaScript</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="skills__item item-skills">
+							<div class="item-skills__content">
+								<h3 class="item-skills__title">Tools</h3>
+								<div class="item-skills__text">
+									<ul>
+										<li>• VS Code</li>
+										<li>• Figma</li>
+										<li>• Git/GitHub</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="skills__item item-skills">
+							<div class="item-skills__content">
+								<h3 class="item-skills__title">Core Skills</h3>
+								<div class="item-skills__text">
+									<ul>
+										<li>• Semantic & accessible HTML</li>
+										<li>• Responsive design</li>
+										<li>• Cross-browser compatibility</li>
+										<li>• Website optimization</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
+
+			</section>
+			<section class="page__works works" id="works">
+				<div class="works__container">
+					<div class="block-header">
+						<h2 class="block-header__title title">My works</h2>
+
+					</div>
+					<!-- Slider main container -->
+					<div class="works__slider slider-works swiper">
+						<!-- Additional required wrapper -->
+						<div class="slider-works__wrapper swiper-wrapper">
+							<!-- Slides -->
+							<div class="slider-works__slide swiper-slide">
+								<a href="works/kapps-new/index.html" class="slider-works__link"><img src="img/portfolio/3.jpg"
+										class="slider-works__image" alt=""></a>
+							</div>
+							<div class="slider-works__slide swiper-slide">
+								<a href="works/PrimeOne/index.html" class="slider-works__link"><img src="img/portfolio/1.png"
+										class="slider-works__image" alt=""></a>
+							</div>
+							<div class="slider-works__slide swiper-slide">
+								<a href="works/bicycle/index.html" class="slider-works__link"><img src="img/portfolio/5.png"
+										class="slider-works__image" alt=""></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__contact contact" id="contact">
+				<div class="contact__container">
+					<h2 class="contact__title">Contact</h2>
+					<div class="contact__content">
+						<ul class="contact__list">
+							<li class="contact__item">
+								<a href="mailto:dashapetrischeva@gmail.com" class="contact__link"><img src="img/icons/1.png"
+										alt="icon"><span>E-mail: dashapetrischeva@gmail.com</span></a>
+							</li>
+							<li class="contact__item">
+								<a href="https://www.linkedin.com/in/dashapetrischeva"
+									class="contact__link contact__link--linkedin">
+									<img src="img/icons/2.png" alt="icon"><span>Linkedin:
+										dashapetrischeva</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
 			</div>
 		</footer>
-		</div>	
-  
-
-	
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script src="js/slick.min.js"></script>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
-</html>		
+
+</html>
