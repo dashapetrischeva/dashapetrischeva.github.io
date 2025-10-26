@@ -48,7 +48,7 @@ h6 {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
   }
 }
 html {
@@ -79,22 +79,40 @@ body {
 .header__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.9375rem;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 33.125rem) {
+  .header__container {
+    gap: 0;
+  }
+}
 .header__logo {
   line-height: 5.625rem;
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #fff;
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
 }
+@media (max-width: 33.125rem) {
+  .header__logo {
+    line-height: 3.625rem;
+  }
+}
 
+@media (max-width: 33.125rem) {
+  .menu-header {
+    flex-grow: 1;
+    margin-bottom: 0.9375rem;
+    gap: 0;
+  }
+}
 .menu-header__list {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
+  justify-content: space-between;
 }
 .menu-header__link {
   color: #fff;
@@ -103,7 +121,7 @@ body {
 }
 .menu-header__link::after {
   content: "";
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   width: 0;
   display: block;
   margin: 0 auto;
@@ -122,14 +140,14 @@ body {
 
 .item {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
 }
 .item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.3125rem);
 }
 .item__header {
   display: flex;
@@ -145,7 +163,7 @@ body {
   background: #f0858b;
   color: #fff;
   padding: 0.4rem 0.8rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   text-decoration: none;
   font-size: 0.9rem;
   transition: background 0.3s;
@@ -168,7 +186,7 @@ body {
   text-align: left;
   color: #fff;
   line-height: 1.3125rem;
-  padding: 1.875rem 0rem;
+  padding-block: 1.875rem;
 }
 
 .about {
@@ -181,20 +199,20 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.9375rem;
-  padding: 50px;
+  padding: 3.125rem;
   grid-auto-rows: 1fr;
 }
-@media (max-width: 1050px) {
+@media (max-width: 65.625rem) {
   .about__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 856px) {
+@media (max-width: 53.5rem) {
   .about__container {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 .about__image {
@@ -213,7 +231,7 @@ body {
   grid-column: 2/6;
   grid-row: 1;
 }
-@media (max-width: 856px) {
+@media (max-width: 53.5rem) {
   .content-about {
     grid-column: 1;
   }
@@ -221,10 +239,10 @@ body {
 .content-about__header {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.9375rem;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .content-about__title {
   font-family: "Bebas Neue";
@@ -233,22 +251,22 @@ body {
   color: #db020d;
 }
 .content-about__profession {
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 700;
 }
 .content-about__works {
-  line-height: 40px;
+  line-height: 2.5rem;
   background-color: #db020d;
   color: #fff;
   text-transform: uppercase;
   animation: floating 3s infinite ease-in-out;
   width: auto;
-  padding-inline: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  padding-inline: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 .content-about__text {
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.5625rem;
 }
 
@@ -258,14 +276,14 @@ body {
 }
 .skills__items {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 .skills__item {
   flex: 1;
-  border-radius: 20px;
-  max-width: 800px;
-  padding: 20px 40px;
+  border-radius: 1.25rem;
+  max-width: 50rem;
+  padding: 1.25rem 2.5rem;
   color: #4b3f3f;
   transform: skew(-10deg);
   background-color: #e8d1d1;
@@ -286,11 +304,11 @@ body {
 }
 .item-skills__title {
   font-weight: 900;
-  margin-bottom: 15px;
-  font-size: 20px;
+  margin-bottom: 0.9375rem;
+  font-size: 1.25rem;
 }
 .item-skills__text {
-  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 120%;
 }
 
@@ -301,12 +319,17 @@ body {
   background-color: #db020d;
   color: #fff;
   border-radius: 0.625rem;
-  padding: 50px;
+  padding: 3.125rem;
   text-align: center;
 }
+@media (max-width: 31.25rem) {
+  .contact__container {
+    padding: 3.125rem 0.9375rem;
+  }
+}
 .contact__title {
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 1.875rem;
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -316,17 +339,25 @@ body {
   margin: 0 auto;
 }
 .contact__item {
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
 }
 .contact__link {
-  gap: 15px;
+  gap: 0.9375rem;
   display: flex;
   align-items: center;
 }
+@media (max-width: 31.25rem) {
+  .contact__link {
+    word-break: break-all;
+  }
+  .contact__link strong {
+    display: none;
+  }
+}
 .contact__item span::after {
   content: "";
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   width: 0;
   display: block;
   margin: 0 auto;
@@ -337,22 +368,22 @@ body {
   width: 100%;
 }
 .contact__item img {
-  max-height: 24px;
+  max-height: 1.5rem;
 }
 .contact__item span {
-  padding-top: 7px;
+  padding-top: 0.4375rem;
 }
 
 .contact__link--linkedin img {
-  padding-inline: 5px;
+  padding-inline: 0.3125rem;
 }
 
 .works {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 .block-header__title {
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 1.875rem;
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
@@ -360,7 +391,7 @@ body {
 }
 
 .slider-works {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 .slider-works__link {
   aspect-ratio: 1/0.7;
@@ -385,7 +416,7 @@ body {
     width: 100%;
   }
   .skills__item:hover {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
-    transform: skew(-10deg) translateY(-5px);
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+    transform: skew(-10deg) translateY(-0.3125rem);
   }
 }
