@@ -1,49 +1,40 @@
-@mixin flexbox() { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;font-size:0;}
+@use "sass:math";
+@use "nullstyle.scss"; 
+@use  "fonts.scss"; 
 
-
-@mixin font ($font-family, $font-file) {
-  @font-face {
-    font-family: $font-family;
-    src: url ($font-file+'.eot');
-    src: url ($font-file+'.eot?#iefix') format ('embedded-opentype'),
-         url ($font-file+'.woff') format ('woff'),
-         url ($font-file+'.ttf') format ('truetype'),
-         url ($font-file+'.svg#'+$font-family) format ('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
+body{ 
+	font-family: 'PT Sans', sans-serif;
+	font-size:14px;
+	line-height:1;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@include font ('akzidenz', '../fonts/akzidenz');
-
-
-$fontfamily:'PT Sans';  
-
-$minwidth:320px;
-@import "nullstyle.scss";
-.wrapper{
-	overflow:hidden;
-	min-height:100%;
+.wrapper {
 	padding-top:30px;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main {
+		flex-grow: 1;
+	}
 }
-.container{
+[class*="__container"]{
+
+	margin:0 auto;
 	max-width:880px;
-	padding:0 30px;
+	padding-inline: 30px;  
 }
+
 
 .header {
 	&__top {
 		z-index:50;
 	}
 	&__top-row {
-		@include flexbox();
+		display:flex;
 		position:relative;
 		justify-content: space-between;
 	}
 	&__top-left {
-		@include flexbox();
+			display:flex;
 		a{
 			display:block;
 			font-size: 10px;
@@ -63,7 +54,7 @@ $minwidth:320px;
 	}
 	&__top-right {
 		padding-top:5px;
-		font-family:'Bebas Neue';
+		font-family:'Akzidenz', cursive;
 		a{
 			font-size: 15px;
 			color: #000000;
@@ -97,7 +88,7 @@ $minwidth:320px;
 	&__row {
 		
 		position:relative;
-		@include flexbox();
+			display:flex;
 		justify-content:center;
 		align-items:center;
 		flex-direction:column;
@@ -109,7 +100,7 @@ $minwidth:320px;
 		text-align:center;
 	}
 	.menu__body{
-		@include flexbox();
+		display:flex;
 		align-items:center;
 		margin-top:-10px;
 		margin-bottom:35px;
@@ -121,7 +112,7 @@ $minwidth:320px;
 		flex-direction:row;
 		
 		li{
-			list-style:none;
+	
 			font-weight:700;
 			margin-right:45px;
 		&:last-child {
@@ -143,12 +134,14 @@ display:block;
 	} 
 	.menu__link {
 		font-size: 15px;
-		font-family:'Bebas Neue';
+		font-family:'Akzidenz', cursive;
 		text-transform:uppercase;
-		color: #4D4959;
+		color: #000;
 		letter-spacing:2px;
-		
-		
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 	}
 @media (max-width:900px){
 
@@ -294,8 +287,8 @@ display:block;
 			color: #FFFFFF;
 			margin-bottom:25px;
 			text-transform: uppercase;
-			font-family:'Bebas Neue';
-			letter-spacing:5px;
+			font-family: "Akzidenz", cursive;
+			letter-spacing:2.5px;
 		}
 	}
 	
@@ -427,6 +420,8 @@ display:block;
 		font-size: 50px;
 		color: #000000;
 		text-transform:uppercase;
+		letter-spacing: 5px;
+		font-family: "Akzidenz", cursive;
 	}
 	&__row {
 		display:flex;
@@ -534,14 +529,15 @@ display:block;
 		color: #FFFFFF;
 		padding: 49px;
 		text-transform:uppercase;
-
+		font-family:'Akzidenz', cursive;
+		letter-spacing: 5px;
 	}
 	&__title-img {
 		flex: 0 1 50%;
 
 
 	}
-	&__body {
+&__body {
 		background-color:#EBEBEB;
 	}
 	&__body-content{
@@ -561,16 +557,25 @@ display:block;
 		display:flex;
 		position:relative;
 	}
-	&__body-left-block-img {}
+	&__body-left-block-img {
+		img{
+vertical-align: top;
+		}
+		
+	}
 	&__body-left-block-body {
 		padding:5px 25px 5px 10px;
 	}
 	&__body-left-block-body-title {
-		font-size: 20px;
+		font-size: 25px;
 		font-weight: 700;
 		color: #000000;
 		margin-bottom:17px;
 		text-transform:uppercase;
+		font-family:'Akzidenz', cursive;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 2.5px;
 	}
 	&__body-left-block-body-text {
 		font-size: 15px;
@@ -587,16 +592,20 @@ display:block;
 		display:flex;
 		position:relative;
 	}
-	&__body-right-block-img {}
+	
 	&__body-right-block-body {
 		padding:5px 25px 5px 10px;
 	}
 	&__body-right-block-body-title {
-		font-size: 20px;
+		font-size: 25px;
 		font-weight: 700;
 		color: #000000;
 		margin-bottom:17px;
 		text-transform:uppercase;
+		font-family:'Akzidenz', cursive;
+		font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 2.5px;
 	}
 	&__body-right-block-body-text {
 		font-size: 15px;
@@ -623,7 +632,6 @@ display:block;
 }
 
 //===========================================
-
 .services {
 	padding: 75px 0 40px 0 ;
 	font-family:'Bebas Neue';
@@ -659,7 +667,7 @@ display:block;
 
 	}
 	&__column-item {
-	   @include flexbox();
+	  display:flex;
 		flex-direction:column;
 		height:100%;
 		
@@ -668,22 +676,26 @@ display:block;
 		margin-top:15px;
 		max-width:175px;
 		padding-right:40px;
-		margin-bottom:35px;
+		
 		font-size: 25px;
 		font-weight: 500;
 		color: #000000;
-		margin-left:5px;
-		letter-spacing:2px;
+		
+		text-transform: uppercase;
+    letter-spacing: 2.5px;
+		font-family:'Akzidenz',cursive;
 	}
 	&__column-body-text {
-		max-width:175px;
+
 		font-size: 15px;
 		color: #000000;
-		line-height:30px;
-		margin-bottom:30px;
-		margin-left:5px;
+		line-height:25px;
+		margin-bottom:27px;
+		margin-top: 31px;
 		font-family:'PT Sans';
 		flex:1 1 auto;
+font-weight:400;
+
 	}
 	&__column-body-button {
 		  
@@ -691,17 +703,18 @@ display:block;
 			height:50px;
 			background: rgba(0, 0, 0, 1);
 			padding:0 35px;
-			font-size: 15px;
+			font-size: 18px;
 			font-weight: 700;
 			text-transform:uppercase;
 			color: #FFFFFF;
-			letter-spacing:2px;
+			    letter-spacing: 1.5px;
+				 font-weight:400;
 			line-height:50px;
 			font-family:'Bebas Neue';
 	}
 	&__column-body-link {
 		display:inline-block;
-		font-size: 15px;
+		font-size: 18px;
 		font-style: 700;
 		margin-top:20px;
 		text-transform:uppercase;
@@ -726,7 +739,7 @@ display:block;
 	&__row {
 		display:flex;
 		position:relative;
-		font-family:'Bebas Neue';
+		font-family:'Bebas Neue',cursive;
 
 	}
 	&__img {
@@ -743,6 +756,7 @@ display:block;
 		width:64%;
 	}
 	&__title {
+		font-family:'Akzidenz',cursive;
 		font-size: 50px;
 		text-transform:uppercase;
 		letter-spacing:5px;
