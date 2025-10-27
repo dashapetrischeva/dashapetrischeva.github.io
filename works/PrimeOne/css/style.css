@@ -112,9 +112,6 @@ body {
   padding-inline: 30px;
 }
 
-.header__content {
-  padding-inline: 15px;
-}
 .header__top {
   z-index: 50;
 }
