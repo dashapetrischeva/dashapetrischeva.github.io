@@ -112,6 +112,9 @@ body {
   padding-inline: 30px;
 }
 
+.header__content {
+  padding-inline: 15px;
+}
 .header__top {
   z-index: 50;
 }
@@ -546,14 +549,6 @@ body {
   .sayhello__row {
     flex-direction: column;
   }
-  .sayhello__right {
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-bottom: 30px;
-  }
-  .sayhello__left, .sayhello__title {
-    margin-left: 60px;
-  }
 }
 .why__title-row {
   display: flex;
@@ -584,7 +579,7 @@ body {
   position: relative;
   max-width: 880px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50px 15px;
 }
 .why__body-left {
   flex: 0 1 50%;
@@ -686,6 +681,11 @@ body {
 @media (max-width: 750px) {
   .services__column {
     flex: 0 0 50%;
+  }
+}
+@media (max-width: 450px) {
+  .services__column {
+    flex: 1 1 100%;
   }
 }
 .services__column-img {
