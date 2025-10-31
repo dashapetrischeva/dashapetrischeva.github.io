@@ -180,7 +180,7 @@ body {
   opacity: 1;
   visibility: visible;
 }
-.brands__column_big {
+.brands__column--big {
   flex: 0 1 66.667%;
   position: relative;
 }
@@ -615,7 +615,7 @@ body {
   position: relative;
   height: 100%;
 }
-.item .item_image {
+.item .item__image {
   display: block;
   width: 100%;
   height: 100%;
@@ -648,42 +648,42 @@ body {
   flex: 0 1 16.666%;
   position: relative;
 }
-.shop__column-big {
+.shop__column--big {
   flex: 0 1 33.33%;
   position: relative;
 }
-.shop__block {
+
+.block-column {
   position: relative;
   height: 100%;
 }
-.shop__block-row {
+.block-column__row {
   display: flex;
   position: relative;
 }
-
-.block__shop-column {
+.block-column__column {
   flex: 0 1 50%;
   position: relative;
 }
 
-.block__shop__item-big {
+.column-shop__item--big {
   position: relative;
   height: 33.375rem;
 }
-.block__shop__item-big .block__shop__item {
+.column-shop__item--big .column-shop__item {
   padding-bottom: 50%;
 }
 
-.shop__block {
+.column-shop__block {
   height: 16.6875rem;
   position: relative;
 }
 
-.block__shop-column {
+.block-column__column {
   height: 16.6875rem;
 }
 
-.shop__column-row {
+.column-shop__row {
   flex-direction: column;
 }
 
@@ -694,7 +694,7 @@ body {
   .shop__column {
     flex: 0 1 50%;
   }
-  .shop__column-big {
+  .shop__column--big {
     flex: 0 1 100%;
   }
 }
