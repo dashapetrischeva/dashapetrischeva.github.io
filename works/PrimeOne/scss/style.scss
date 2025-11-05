@@ -185,7 +185,6 @@ display:block;
 }
 .logo-header{
 	flex: 1 1 100%;
-	justify-content:flex-center;
 }
 
 .menu-header{ 
@@ -705,7 +704,7 @@ vertical-align: top;
 	&__link {
 		display:inline-block;
 		font-size: 18px;
-		font-style: 700;
+		font-weight: 700;
 		margin-top:20px;
 		text-transform:uppercase;
 		letter-spacing:2px;
@@ -771,7 +770,7 @@ vertical-align: top;
 		display:inline-block;
 		text-transform:uppercase;
 		border-bottom: 1px solid #BDBDBD;
-		font-style: 700;
+		font-weight: 700;
 		margin-top:20px;
 		margin-left:13px;
 	}
