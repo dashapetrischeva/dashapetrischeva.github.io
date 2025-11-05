@@ -108,22 +108,23 @@ body {
 
 [class*=__container] {
   margin: 0 auto;
-  max-width: 880px;
-  padding-inline: 30px;
+  max-width: 910px;
+  padding-inline: 15px;
 }
 
 .header__top {
   z-index: 50;
 }
-.header__top-row {
+
+.top-header__row {
   display: flex;
   position: relative;
   justify-content: space-between;
 }
-.header__top-left {
+.top-header__left {
   display: flex;
 }
-.header__top-left a {
+.top-header__left a {
   display: block;
   font-size: 10px;
   color: #000000;
@@ -133,15 +134,15 @@ body {
   font-family: "Bebas Neue";
   letter-spacing: 1px;
 }
-.header__top-left .active {
+.top-header__left .active {
   background: rgb(0, 0, 0);
   color: #FFFFFF;
 }
-.header__top-right {
+.top-header__right {
   padding-top: 5px;
   font-family: "Akzidenz", cursive;
 }
-.header__top-right a {
+.top-header__right a {
   font-size: 15px;
   color: #000000;
   text-decoration: underline;
@@ -159,54 +160,41 @@ body {
   width: 100%;
   height: 100%;
 }
-.header__content {
-  max-width: 880px;
-  margin: 0 auto;
+.header__container {
   position: relative;
 }
-.header__row {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 35px;
-  margin-bottom: 80px;
-}
-.header__logo {
+
+.logo-header {
   text-align: center;
 }
-.header .menu__body {
+
+.menu {
   display: flex;
   align-items: center;
   margin-top: -10px;
   margin-bottom: 35px;
 }
-.header .menu__list {
+
+.menu__list {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-.header .menu__list li {
+.menu__list li {
   font-weight: 700;
-  margin-right: 45px;
-}
-.header .menu__list li:last-child {
-  margin-right: 0;
 }
 @media (max-width: 840px) {
-  .header .menu__list {
+  .menu__list {
     display: block;
   }
 }
-.header .menu__list_2 {
-  text-align: right;
-  margin-left: 45px;
-  margin-right: 0;
-}
-.header .menu_column {
+
+.column-menu {
   flex: 0 0 33.333%;
 }
-.header .menu__link {
+
+.link-menu {
   font-size: 15px;
   font-family: "Akzidenz", cursive;
   text-transform: uppercase;
@@ -217,44 +205,45 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
+
 @media (max-width: 900px) {
-  .header .menu__list li {
+  .menu__list li {
     margin-right: 25px;
   }
-  .header .menu__list_2 {
+  .menu__list--2 {
     margin-left: 25px;
   }
 }
 @media (max-width: 840px) {
-  .header .header-menu .menu__list_2 {
+  .menu-header .menu__list--2 {
     text-align: left;
     margin-left: 0;
   }
-  .header .header-menu .header__top-left {
+  .menu-header .top-header__left {
     margin-bottom: 10px;
   }
-  .header .header__top-right {
+  .top-header__right {
     position: relative;
     z-index: 12;
   }
-  .header .menu__body {
+  .menu {
     margin-top: -30px;
   }
-  .header .header__logo {
+  .logo-header {
     position: relative;
     z-index: 11;
   }
-  .header .header__logo img {
+  .logo-header img {
     width: 106px;
   }
-  .header .header__top-row {
+  .top-header__row {
     justify-content: flex-end;
   }
-  .header .header__logo {
+  .logo-header {
     flex: 1 1 100%;
     justify-content: flex-center;
   }
-  .header .header-menu {
+  .menu-header {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -266,20 +255,19 @@ body {
     z-index: 4;
     transition: all 0.8s ease 0s;
   }
-  .header .header-menu.active {
+  .menu-header.active {
     left: 0;
   }
-  .header .header-menu li {
+  .menu-header li {
     padding: 5px 0;
   }
 }
-
-.header-menu__icon {
+.menu-icon {
   display: none;
 }
 
 @media (max-width: 840px) {
-  .header-menu__icon {
+  .menu-icon {
     display: block;
     position: absolute;
     top: 0;
@@ -289,7 +277,7 @@ body {
     cursor: pointer;
     z-index: 12;
   }
-  .header-menu__icon span {
+  .menu-icon span {
     transition: all 0.3s ease 0s;
     top: 8px;
     left: 0px;
@@ -298,21 +286,21 @@ body {
     height: 2px;
     background-color: #000;
   }
-  .header-menu__icon span:first-child {
+  .menu-icon span:first-child {
     top: 0px;
   }
-  .header-menu__icon span:last-child {
+  .menu-icon span:last-child {
     top: auto;
     bottom: 0px;
   }
-  .header-menu__icon.active span {
+  .menu-icon.active span {
     transform: scale(0);
   }
-  .header-menu__icon.active span:first-child {
+  .menu-icon.active span:first-child {
     transform: rotate(45deg);
     top: 8px;
   }
-  .header-menu__icon.active span:last-child {
+  .menu-icon.active span:last-child {
     transform: rotate(-45deg);
     top: 8px;
   }
@@ -334,12 +322,13 @@ body {
     height: 300px;
   }
 }
-.getintouch__form {
+
+.form {
   flex: 0 1 50%;
   padding: 50px 60px;
   background-color: #000000;
 }
-.getintouch__form__title {
+.form__title {
   font-size: 25px;
   color: #FFFFFF;
   margin-bottom: 25px;
@@ -347,7 +336,7 @@ body {
   font-family: "Akzidenz", cursive;
   letter-spacing: 2.5px;
 }
-.getintouch__form-name {
+.form__name {
   display: block;
   border-color: rgb(149, 149, 149);
   border-width: 2px;
@@ -357,15 +346,15 @@ body {
   background-color: #252525;
   width: 55%;
 }
-.getintouch__form-name::-moz-placeholder {
+.form__name::-moz-placeholder {
   font-size: 15px;
   color: #959595;
 }
-.getintouch__form-name::placeholder {
+.form__name::placeholder {
   font-size: 15px;
   color: #959595;
 }
-.getintouch__form-email {
+.form__email {
   display: block;
   border-color: rgb(149, 149, 149);
   border-width: 2px;
@@ -375,15 +364,15 @@ body {
   background-color: #252525;
   width: 55%;
 }
-.getintouch__form-email::-moz-placeholder {
+.form__email::-moz-placeholder {
   font-size: 15px;
   color: #959595;
 }
-.getintouch__form-email::placeholder {
+.form__email::placeholder {
   font-size: 15px;
   color: #959595;
 }
-.getintouch .getintouch__form-msg {
+.form__msg {
   display: block;
   border-color: rgb(149, 149, 149);
   border-width: 2px;
@@ -397,7 +386,7 @@ body {
   width: 55%;
   font-size: 15px;
 }
-.getintouch__form-submit {
+.form__submit {
   display: block;
   padding: 20px 25px;
   background: rgb(255, 255, 255);
@@ -415,11 +404,18 @@ body {
   .getintouch__row {
     flex-direction: column;
   }
-  .getintouch__form-name, .getintouch__form-email {
-    width: 80%;
+  .form__name, .form__email {
+    width: 100%;
+    max-width: 374px;
   }
-  .getintouch .getintouch__form-msg {
-    width: 80%;
+  .getintouch .form__msg {
+    width: 100%;
+    max-width: 374px;
+  }
+}
+@media (max-width: 495px) {
+  .form {
+    padding-inline: 15px;
   }
 }
 .footer {
@@ -547,12 +543,12 @@ body {
     flex-direction: column;
   }
 }
-.why__title-row {
+.title-why__row {
   display: flex;
   position: relative;
   width: 100%;
 }
-.why__title-text {
+.title-why__text {
   flex: 0 1 50%;
   background: rgb(0, 0, 0);
   font-size: 50px;
@@ -565,36 +561,38 @@ body {
   font-family: "Akzidenz", cursive;
   letter-spacing: 5px;
 }
-.why__title-img {
+.title-why__img {
   flex: 0 1 50%;
 }
-.why__body {
+
+.body-why {
   background-color: #EBEBEB;
 }
-.why__body-content {
+.body-why__content {
   display: flex;
   position: relative;
-  max-width: 880px;
+  max-width: 910px;
   margin: 0 auto;
   padding: 50px 15px;
 }
-.why__body-left {
+
+.left-why {
   flex: 0 1 50%;
 }
-.why__body-left-block {
+.left-why__block {
   margin-bottom: 50px;
 }
-.why__body-left-block-row {
+.left-why__row {
   display: flex;
   position: relative;
 }
-.why__body-left-block-img img {
+.left-why__img img {
   vertical-align: top;
 }
-.why__body-left-block-body {
+.left-why__body {
   padding: 5px 25px 5px 10px;
 }
-.why__body-left-block-body-title {
+.left-why__title {
   font-size: 25px;
   font-weight: 700;
   color: #000000;
@@ -605,25 +603,26 @@ body {
   line-height: 25px;
   letter-spacing: 2.5px;
 }
-.why__body-left-block-body-text {
+.left-why__text {
   font-size: 15px;
   line-height: 26px;
   color: #000000;
 }
-.why__body-right {
+
+.right-why {
   flex: 0 1 50%;
 }
-.why__body-right-block {
+.right-why__block {
   margin-bottom: 50px;
 }
-.why__body-right-block-row {
+.right-why__row {
   display: flex;
   position: relative;
 }
-.why__body-right-block-body {
+.right-why__body {
   padding: 5px 25px 5px 10px;
 }
-.why__body-right-block-body-title {
+.right-why__title {
   font-size: 25px;
   font-weight: 700;
   color: #000000;
@@ -634,21 +633,21 @@ body {
   line-height: 25px;
   letter-spacing: 2.5px;
 }
-.why__body-right-block-body-text {
+.right-why__text {
   font-size: 15px;
   line-height: 26px;
   color: #000000;
 }
 
 @media (max-width: 1000px) {
-  .why__title-row, .why__body-content {
+  .title-why__row, .body-why__content {
     flex-direction: column;
     position: relative;
   }
-  .why__body-content {
+  .body-why__content {
     padding-bottom: 0;
   }
-  .why__body-left, .why__body-right {
+  .left-why, .right-why {
     flex: 0 1 100%;
   }
 }
@@ -672,32 +671,33 @@ body {
     flex-wrap: wrap;
   }
 }
-.services__column {
+
+.column-service {
   flex: 0 0 25%;
 }
 @media (max-width: 750px) {
-  .services__column {
+  .column-service {
     flex: 0 0 50%;
   }
 }
 @media (max-width: 450px) {
-  .services__column {
+  .column-service {
     flex: 1 1 100%;
   }
 }
-.services__column-img {
+.column-service__img {
   display: block;
   padding-bottom: 100%;
 }
-.services__column-body {
+.column-service__body {
   padding: 25px 35px 25px 0px;
 }
-.services__column-item {
+.column-service__item {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.services__column-body-title {
+.column-service__title {
   margin-top: 15px;
   max-width: 175px;
   padding-right: 40px;
@@ -708,7 +708,7 @@ body {
   letter-spacing: 2.5px;
   font-family: "Akzidenz", cursive;
 }
-.services__column-body-text {
+.column-service__text {
   font-size: 15px;
   color: #000000;
   line-height: 25px;
@@ -718,7 +718,7 @@ body {
   flex: 1 1 auto;
   font-weight: 400;
 }
-.services__column-body-button {
+.column-service__button {
   display: inline-block;
   height: 50px;
   background: rgb(0, 0, 0);
@@ -732,7 +732,7 @@ body {
   line-height: 50px;
   font-family: "Bebas Neue";
 }
-.services__column-body-link {
+.column-service__link {
   display: inline-block;
   font-size: 18px;
   font-style: 700;
@@ -752,7 +752,7 @@ body {
 .private__img {
   flex: 0 1 50%;
 }
-.private_body {
+.private__body {
   flex: 0 1 50%;
   background: rgb(0, 0, 0);
   color: #FFFFFF;
@@ -799,12 +799,12 @@ body {
 }
 @media (max-width: 1000px) {
   .private__content {
-    width: 84%;
+    width: 100%;
   }
   .private__title {
     font-size: 35px;
   }
-  .private_body {
+  .private__body {
     padding: 44px 33px;
   }
   .private__text {
@@ -821,7 +821,7 @@ body {
   .private__img {
     display: none;
   }
-  .private_body {
+  .private__body {
     flex: 0 1 100%;
   }
   .private__content {
@@ -830,7 +830,7 @@ body {
   .private__title {
     font-size: 35px;
   }
-  .private_body {
+  .private__body {
     padding: 44px 33px;
   }
   .private__text {
