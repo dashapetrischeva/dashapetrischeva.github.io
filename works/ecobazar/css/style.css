@@ -317,7 +317,7 @@ label {
   font-weight: 400;
   line-height: 1.5;
   color: #1a1a1a;
-  transition: all 0.3;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 @media (min-width: 84.375em) {
   .block-header__slider-arrow {
