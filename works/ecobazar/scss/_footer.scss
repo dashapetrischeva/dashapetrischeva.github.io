@@ -1,0 +1,129 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+
+.footer {
+background-color: $grey9;
+		
+}
+.body-footer {
+padding-block:3.75rem;
+		&__container {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("row-gap", 50, 30);
+		@include adaptiveValue("column-gap", 100, 20, 0, $containerWidth, $tablet);
+		@media (max-width: toEm($tablet)) {
+			flex-wrap: wrap;
+		}
+	}
+
+		&__content {
+			color:$grey5;
+			@include typography("S");
+			flex-basis: 21.25rem;
+			display:grid;
+			gap:1rem;
+			@media (max-width: toEm($tablet)) {
+			flex-basis:100%;
+		}
+		}
+
+		&__links {
+			display:flex;
+			gap:0.625rem;
+		}
+
+		&__link {
+			color:$white;
+			@include typography("S", 500);
+			transition: text-decoration-color 0.3s;
+			text-decoration: underline;
+			text-decoration-color: $success;
+			text-underline-offset: 0.625rem;
+			text-decoration-thickness: 0.125rem;
+			@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				text-decoration-color: $warning;
+			}
+		}
+		}
+
+		&__menus {
+			flex-grow:1;
+			display:flex;
+			justify-content: space-between; 
+			column-gap:0.9375rem;
+			row-gap:1.5625rem;
+			@media (max-width: toEm($tablet)) { 
+			flex-wrap:wrap;
+		}
+		}
+}
+.logo-footer {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	// .logo-header__text
+	&__text {
+		color: $white;
+		@include typography("h5", 500);
+	}
+}
+.menus-footer {
+		&__title {
+			@include typography("M", 500);
+			color:$white;
+			&:not(:last-child){
+				margin-bottom: 1.25rem;
+			}
+		}
+
+		&__item {
+			&:not(:last-child){ 
+				margin-bottom: 0.75rem;
+
+			}
+		}
+
+		&__link {
+			@include typography("S");
+			color:$grey4;
+			transition: color 0.3s;
+			@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $white;
+			}
+		}
+		}
+}
+
+.bottom-footer {
+		border-top: toRem(1) solid $grey8;
+		padding-block:1.5rem;
+		&__container {
+			display:flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: toRem(15);
+			@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		}
+
+		&__copyright {
+			color:$grey5;
+			@include typography("S");
+		}
+
+		&__payments {
+			display:flex;
+			align-items: center;
+			gap:0.5rem;
+			flex-wrap: wrap;
+		}
+}
+

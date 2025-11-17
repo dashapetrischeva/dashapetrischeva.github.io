@@ -1,0 +1,29 @@
+@use "sass:math";
+@use "_reset.scss";
+@use "_iconfont.scss";
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss";
+@use "_home.scss";
+@use "_header.scss";
+@use "_footer.scss";
+body{ 
+	font-family: "Poppins", sans-serif;
+	font-size: 0.875rem;
+	line-height:1;
+	color:$grey6;
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main {
+		flex-grow: 1;
+	}
+}
+[class*="__container"]{
+	max-width:84.375rem;
+	margin:0 auto;
+	padding-inline:0.9375rem; 
+	 
+}
