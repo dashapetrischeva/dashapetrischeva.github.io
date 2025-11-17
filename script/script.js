@@ -19,6 +19,10 @@ function sliderInit() {
 	const sliderReviews = new Swiper('.slider-works', {
 		// Optional parameters
 		loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 		slidesPerView: 3,
 		spaceBetween: 24,
 		breakpoints: {

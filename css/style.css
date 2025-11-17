@@ -51,6 +51,17 @@ h6 {
     transform: translateY(-0.625rem);
   }
 }
+@keyframes ChangeColor {
+  0% {
+    background-position: 0% 94%;
+  }
+  50% {
+    background-position: 100% 7%;
+  }
+  100% {
+    background-position: 0% 94%;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -419,4 +430,17 @@ body {
     box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
     transform: skew(-10deg) translateY(-0.3125rem);
   }
+}
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #db020d;
 }

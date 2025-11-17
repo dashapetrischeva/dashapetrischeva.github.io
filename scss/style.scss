@@ -8,6 +8,11 @@
 		transform: translateY(-0.625rem); 
 	}
 }
+@keyframes ChangeColor {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%} 
+}
 html{
 	scroll-behavior: smooth;
 }
@@ -23,7 +28,10 @@ body{
 		flex-grow: 1;
 	
 	}
-	background-color: #f0858b;
+	 background-color: #f0858b;
+	//  background: linear-gradient(245deg, #8dfeff, #ffd897, #97ff9b, #ff9797, #ff97f2);
+   // background-size: 1000% 1000%;
+   // animation: ChangeColor 51s ease infinite;
 }
 [class*="__container"]{
 	max-width: 76.875rem;
@@ -230,7 +238,7 @@ margin-bottom:1.875rem;
 
 		&__profession {
 			font-size:1.1875rem;
-			font-weight:700;
+			font-weight:700; 
 			
 		}
 &__works{
@@ -452,6 +460,18 @@ margin-bottom: 3.125rem;
 		}
 }
 
-
+.swiper-pagination{
+	position:relative;
+	margin-top:20px; 
+}
 	
+.swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background: #db020d;
+}
+
+
 
